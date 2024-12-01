@@ -3,7 +3,7 @@ import java.io.*;
 import javax.swing.*;
 
 public class Client {
-  private static final String IP_ADDRESS = "192.168.43.45";
+  private static final String IP_ADDRESS = "192.168.XX.XX";
   private static final int PORT = 5000;
 
   public static void main(String[] args) {
