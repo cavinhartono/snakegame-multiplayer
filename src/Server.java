@@ -5,18 +5,19 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Server {
   private static final int PORT = 5000;
   private static ConcurrentHashMap<Integer, ObjectOutputStream> clients = new ConcurrentHashMap<>();
-  private static GameState gameState = new GameState(); // Manage shared state here
+  private static GameState gameState = new GameState();
 
   public static void main(String[] args) throws IOException {
-    ServerSocket serverSocket = new ServerSocket(PORT);
-    System.out.println("Server started on port " + PORT);
+    try (ServerSocket serverSocket = new ServerSocket(PORT)) {
+      System.out.println("Server started on port " + PORT);
 
-    int clientId = 0;
-    while (true) {
-      Socket clientSocket = serverSocket.accept();
-      System.out.println("New client connected: " + clientSocket.getInetAddress());
-      clientId++;
-      new Thread(new ClientHandler(clientSocket, clientId)).start();
+      int clientId = 0;
+      while (true) {
+        Socket clientSocket = serverSocket.accept();
+        System.out.println("New client connected: " + clientSocket.getInetAddress());
+        clientId++;
+        new Thread(new ClientHandler(clientSocket, clientId)).start();
+      }
     }
   }
 
