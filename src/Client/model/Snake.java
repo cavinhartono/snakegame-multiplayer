@@ -14,7 +14,7 @@ public class Snake {
 	private boolean dead;
 	private boolean isBot;
 	private AStar brain;
-	private String name;
+	public static String name;
 
 	public Snake(int x, int y, Color colorHead, Color colorBody) {
 		this.body = new LinkedList<Tile>();

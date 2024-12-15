@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
+import Client.model.Snake;
 
 // import ;
 // import Client.util.*;
@@ -26,6 +27,7 @@ public class Panel extends JPanel implements ActionListener {
 		this.addKeyListener(new MyKeyAdapter());
 		this.addMouseListener(new MyMouseAdapter());
 
+		Snake.name = JOptionPane.showInputDialog("Enter your name:");
 		MenuSetting.init(this);
 		Board.init(this);
 		MenuStart.init(this);
