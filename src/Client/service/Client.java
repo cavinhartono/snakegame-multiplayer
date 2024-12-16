@@ -43,7 +43,7 @@ public class Client {
             int len = clientSocket.read(Client.buffer);
             System.out.println(len);
             if (len < 4096) {
-                System.out.println("Khong du:" + len);
+                System.out.println(len);
             }
             Client.response = Client.buffer.array();
         } catch (IOException e) {
