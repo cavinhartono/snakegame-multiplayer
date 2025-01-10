@@ -1,18 +1,17 @@
-## Getting Started
+## Snake Game dengan Multiplayer menggunakan Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. Muhammad Cavin Hartono Putra (362379011)
 
-## Folder Structure
+2. Fauzi Riza Wahyudi (362379008)
 
-The workspace contains two folders by default, where:
+### Dokumentasi
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Masukan IP Address dan Port dengan jaringan yang Sama
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+![Input IP Address dan Port](screenshot/ipandport.png)
+![Input IP Address dan Port](https://)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Hasilnya, dengan kode match yang digenerate oleh server dan bisa dimainkan:
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+  ![Hasil dari Multiplayer](screenshot/output.png)
+  ![Hasil dari Multiplayer](https://)
